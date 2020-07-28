@@ -22,6 +22,8 @@ $(window).on('load', function() {
 
 (function($) {
 
+  $("ul#myList").css("column-count", 2);
+
   /*------------------
   	Background set
   --------------------*/
