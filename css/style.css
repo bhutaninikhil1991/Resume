@@ -73,7 +73,7 @@ ol {
 .section-title h2 {
   display: inline-block;
   position: relative;
-  margin-bottom: 110px;
+  margin-bottom: 50px;
   padding-bottom: 2px;
   line-height: normal;
 }
@@ -484,6 +484,21 @@ ol {
   margin-top: 1px;
   background: #cbcbcb;
 } */
+.social-links {
+  padding-top: 10px;
+  padding-bottom: 70px;
+}
+
+.social-links a {
+  font-size: 30px;
+  margin-right: 40px;
+  color: #b9b9b9;
+}
+
+.social-links a:hover {
+  color: #484848;
+}
+
 /*---------------------
 	Resume section
 ----------------------*/
@@ -862,7 +877,7 @@ h4.title {
 
 .home-three-style .main-left-area .section-title h2,
 .home-four-style .main-left-area .section-title h2 {
-  margin-bottom: 130px;
+  margin-bottom: 50px;
 }
 
 .home-three-style .main-right-area,

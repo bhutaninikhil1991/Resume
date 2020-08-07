@@ -1,6 +1,6 @@
 /* =================================
 ------------------------------------
-	Civic - CV Resume
+  Resume
 	Version: 1.0
  ------------------------------------
  ====================================*/
@@ -12,7 +12,7 @@
 
 $(window).on('load', function() {
   /*------------------
-  	Preloder
+  	Preloader
   --------------------*/
   $(".loader").fadeOut();
   $("#preloder").delay(400).fadeOut("slow");
@@ -22,7 +22,7 @@ $(window).on('load', function() {
 
 (function($) {
 
-  $("ul#myList").css("column-count", 2);
+  $("ul.coursework").css("column-count", 2);
 
   /*------------------
   	Background set
@@ -101,23 +101,6 @@ $(window).on('load', function() {
     $(`.${provider}-toggle`).data('toggle', 1);
   }
 
-  var onFrontendTitleClick = function() {
-    $(document).on('click', '#javascript-toggle-main, #css-toggle-main', function(event) {
-      event.preventDefault();
-      const providers = ['javascript']
-      const provider = $(this).attr('id').split("-")[0];
-      const toggle = parseInt($(`.${provider}-toggle`).data('toggle'));
-      const hideProviders = providers.filter(i => i != provider)
-      hideProviders.forEach(i => hideCloudPlatformTitle(i));
-      if (toggle) {
-        hideCloudPlatformTitle(provider);
-      } else {
-        showCloudPlatformTitle(provider)
-      }
-    });
-  };
-  onFrontendTitleClick();
-
   var onBackendTitleClick = function() {
     $(document).on('click', '#dotnet-toggle-main, #framework-toggle-main', function(event) {
       event.preventDefault();
@@ -140,10 +123,11 @@ $(window).on('load', function() {
     $(document).on('click', `#vizualization-toggle-main,
 											#testing-toggle-main,
 											#version-toggle-main,
-                      #integration-toggle-main
+                      #integration-toggle-main,
+                      #tools-toggle-main
 											`, function(event) {
       event.preventDefault();
-      var otherArr = ['vizualization', 'testing', 'version', 'integration']
+      var otherArr = ['vizualization', 'testing', 'version', 'integration', 'tools']
       const tool = $(this).attr('id').split("-")[0];
       const toggle = parseInt($(`.${tool}-toggle`).data('toggle'));
       const hideTools = otherArr.filter(i => i != tool)
