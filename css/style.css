@@ -648,6 +648,11 @@ ol {
   top: 0;
 }
 
+a.disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
 /*---------------------
 Skills section
 -----------------------*/
