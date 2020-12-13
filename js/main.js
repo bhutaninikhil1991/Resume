@@ -102,9 +102,9 @@ $(window).on('load', function() {
   }
 
   var onWebDevelopmentTitleClick = function() {
-    $(document).on('click', '#css-toggle-main,#javascript-toggle-main,#dotnet-toggle-main, #framework-toggle-main', function(event) {
+    $(document).on('click', '#css-toggle-main, #javascript-toggle-main, #dotnet-toggle-main, #framework-toggle-main, #engines-toggle-main', function(event) {
       event.preventDefault();
-      const providers = ['css', 'javascript', 'dotnet, framework']
+      const providers = ['css', 'javascript', 'dotnet', 'framework', 'engines']
       const provider = $(this).attr('id').split("-")[0];
       const toggle = parseInt($(`.${provider}-toggle`).data('toggle'));
       const hideProviders = providers.filter(i => i != provider)
@@ -124,10 +124,10 @@ $(window).on('load', function() {
 											#testing-toggle-main,
 											#version-toggle-main,
                       #integration-toggle-main,
-                      #tools-toggle-main, #dataexchange-toggle-main
+                      #tools-toggle-main, #dataexchange-toggle-main, #AI-toggle-main
 											`, function(event) {
       event.preventDefault();
-      var otherArr = ['vizualization', 'testing', 'version', 'integration', 'tools', 'dataexchange']
+      var otherArr = ['vizualization', 'testing', 'version', 'integration', 'tools', 'dataexchange', 'AI']
       const tool = $(this).attr('id').split("-")[0];
       const toggle = parseInt($(`.${tool}-toggle`).data('toggle'));
       const hideTools = otherArr.filter(i => i != tool)
