@@ -124,10 +124,10 @@ $(window).on('load', function() {
 											#testing-toggle-main,
 											#version-toggle-main,
                       #integration-toggle-main,
-                      #tools-toggle-main, #dataexchange-toggle-main, #AI-toggle-main
+                      #tools-toggle-main, #dataexchange-toggle-main, #AI-toggle-main, #Devops-toggle-main
 											`, function(event) {
       event.preventDefault();
-      var otherArr = ['vizualization', 'testing', 'version', 'integration', 'tools', 'dataexchange', 'AI']
+      var otherArr = ['vizualization', 'testing', 'version', 'integration', 'tools', 'dataexchange', 'AI', 'Devops']
       const tool = $(this).attr('id').split("-")[0];
       const toggle = parseInt($(`.${tool}-toggle`).data('toggle'));
       const hideTools = otherArr.filter(i => i != tool)
